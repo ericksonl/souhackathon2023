@@ -18,10 +18,8 @@ body {
 
 
 h1 {
-    padding-top: 0em;
     font-family: ShakespeareFirstFolioFont, sans-serif;
     font-size: 3.5rem;
-
 }
 
 .logo {
@@ -38,11 +36,11 @@ hr {
 }
 
 p {
+    margin-left: 9rem;
+    margin-right: 9rem;
     font-family: sans-serif;
     text-align: center;
     font-size: 1.3rem;
-    margin-left: 9rem;
-    margin-right: 9rem;
 }
 
 .input-listener {
@@ -52,8 +50,7 @@ p {
     background-color: rgba(211, 211, 211, 0.75);
 }
 
-.sTranslateTable {
-    font-size: large;
+.translateTable {
     margin: auto;
     width: 80%;
 }
@@ -68,13 +65,12 @@ p {
 th {
     font-family: ShakespeareFirstFolioFont, sans-serif;
     font-size: 2rem;
-    
 }
 
 td {
-    border: 1px solid black;
     width: 50%;
     height: 15em;
+    border: 1px solid black;
     border-radius: 10px;
 }
 
@@ -94,9 +90,9 @@ td {
 .btn {
     width: 20rem;
     height: 3rem;
+    border: none;
     border-radius: 12px;
     background-color: rgba(94, 43, 255, 0.75); /* Green */
-    border: none;
     color: black;
     text-align: center;
     text-decoration: none;
@@ -112,23 +108,4 @@ td {
     background-color: rgb(94, 43, 255);
     color: white;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.btn:active {
-    transform: translateY(-1px) 2s;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-
-.btn::after {
-    display: inline-block;
-    border-radius: 100px;
-    position: absolute;
-    transition: all .4s;
-}
-
-
-.btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
 }

@@ -24,49 +24,51 @@ function swapTranslator() {
 }
 
 function translateText() {
+    //if translating from shakespearean to english...
     if (englishShown === false) {
         var textOut = ""
 
         var textIn = (document.getElementById("inputText").innerText).toLowerCase()
 
+        //add breakpoints at special characters
         const breakpoint = /(\.|\,|\;|\:|\!|\?|\s)/
 
+        //split text at special characters and add into array 
         var textArr = textIn.trim().split(breakpoint);
-        console.log(textArr)
+
         for (var i = 0; i < textArr.length; i++) {
+            //if a word exists in the dictionary
             if (getShakesWord(textArr[i])) {
+                //add the mapped word to textOut
                 textOut += getShakesWord(textArr[i])
             } else {
+                //else add the word to textOut
                 textOut += textArr[i]
             }
         }
+        //add textOut to output side of HTML table
         document.getElementById("outputText").innerText = textOut
+
+        //if translating from english to shakespearean...
     } else {
         var textIn = (document.getElementById("inputText2").innerText).toLowerCase()
 
-        let url = "https://api.funtranslations.com/translate/shakespeare.json";
+        //access funtranslations API
+        let url = "https://api.funtranslations.com/translate/shakespeare.json?text=";
 
-        const getUrl = (text) => {
-            return url + "?text=" + text;
-        };
-
-        const showError = (error) => {
-            alert(
-                "Uh Oh! Some error occured\n\n" + error + "\n\nPlease try after sometime."
-            );
-            console.log({ error });
-        };
-
-        fetch(getUrl(textIn))
+        //fetch url with text
+        //ex: https://api.funtranslations.com/translate/shakespeare.json?text=Hello good sir
+        fetch(url + textIn)
             .then((response) => response.json())
-            .then((json) => showOutput(json))
-            .catch(showError);
-
-
-        const showOutput = (text) => {
-            console.log(text);
-            document.getElementById("outputText2").innerHTML = text.contents.translated;
-        };
+            .then((json) => {
+                //add translated text to outputText2
+                document.getElementById("outputText2").innerHTML = json.contents.translated;
+            })
+            //catch any errors like API throttling
+            .catch((error) => {
+                alert("An error occured:\n\n" + error + "\n\nPlease try again later.");
+                console.log({error});
+            });
     }
 }
 

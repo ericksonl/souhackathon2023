@@ -4,13 +4,18 @@ document.getElementById("generateBtn").addEventListener("click", convertText)
 
 function convertText() {
     var textOut = ""
-    var textIn = document.getElementById("shakespeareTxt").innerHTML
-    var tmp = textIn.trim().split(" ");
-    for (var i = 0; i < tmp.length; i++) {
-        if (getShakesWord(tmp[i])) {
-            textOut += getShakesWord(tmp[i]) + " "
+
+    var textIn = (document.getElementById("shakespeareTxt").innerHTML).toLowerCase()
+
+    const breakpoint = /(\.|\,|\;|\:|\!|\?|\s)/
+
+    var textArr = textIn.trim().split(breakpoint);
+    console.log(textArr)
+    for (var i = 0; i < textArr.length; i++) {
+        if (getShakesWord(textArr[i])) {
+            textOut += getShakesWord(textArr[i])
         } else {
-            textOut += tmp[i] + " "
+            textOut += textArr[i]
         }
     }
     document.getElementById("englishTxt").innerText = textOut

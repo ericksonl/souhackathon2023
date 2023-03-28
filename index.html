@@ -8,16 +8,36 @@
 </head>
 
 <body>
-    <h1 class="title">Shakespeare to English</h1>
-    <button id="generateBtn">Generate</button>
-    <table>
-        <tr>
-            <th>Shakespearean</th>
-            <th>English</th>
-        </tr>
-        <td id="shakespeareTxt" class="input-listener" contenteditable="true" placeholder="Shakespearean Text"></td>
-        <td id="englishTxt" class="input-listener" contenteditable="true" placeholder="English Text"></td>
-    </table>
+    <h1 class="title">Shakespeare to Gen-Z</h1>
+    <hr />
+    <p>Shakespeare is well known for having introduced thousands of new words to the the English vocabulary. Although
+        many are used to this day, some have not been used since his time. Listening to the slang of Gen-Z and
+        Gen-Alpha, I often feel like I'm reading a play written by Shakespeare. I can pick out a few words, but I leave
+        feeling confused and angry. How do they expect generations, who have seemingly invented their own language, to
+        read the great works of William Shakespeare? The answer is simple: <br /> Translate it to Gen-Z slang.</p>
+
+    <p>Type Shakespearean in the box on the left to morph it into Gen-Z English on the right. <br /> Or, type English in
+        the
+        box on the right to morph it into Shakespearean on the left.</p>
+    <br />
+    <br />
+    <div class="translateTable">
+        <table class="innerTable">
+            <tr>
+                <th>Shakespearean</th>
+                <th>GenZ</th>
+            </tr>
+            <td id="shakespeareTxt" class="input-listener" contenteditable="true" placeholder="Shakespearean Text"></td>
+            <td id="englishTxt" class="input-listener" contenteditable="true" placeholder="English Text"></td>
+        </table>
+
+        <div class="button-center">
+            <button id="generateBtn" class="btn">Generate</button>
+        </div>
+
+    </div>
+
+
 </body>
 <script src="./js/elizabethDict.js" type="module"></script>
 <script src="./js/main.js" type="module"></script>

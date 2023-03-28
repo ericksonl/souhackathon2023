@@ -19,6 +19,8 @@ Converts Shakespearean text into Gen-Z slang english, and English to Shakspearea
 I grossly underestimated just how many words I would need to map. The dictionary is still not complete, but given more time I would be able to map these out.
 Many of the same words had different meanings. For example, Cheerely, which can be used as an exclamation, or as in "cheerful."
 I did not have enoug time to check for phrases, which requires a completely new dictionary.
+The Fun Translation API only allows 5 calls per hour, which is less than convenient, and I very quickly ran into rate limiting issues. Be forewarned.
+
 
 ## What I learned
 Translating to Shakespearean is easy, but translating from Shakespearean is very difficult.

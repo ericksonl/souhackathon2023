@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Shakespeare</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+</head>
+
+<body>
+    <div class="title-container">
+        <h1 class="title">
+            <img class="logo" src="./assets/Shakespeare.png" />
+            Shakespeare to Gen-Z
+        </h1>
+    </div>
+
+    <hr />
+
+    <p>Shakespeare is well known for having introduced thousands of new words to the the English vocabulary. Although
+        many are used to this day, some have not been used since his time. Listening to the slang of Gen-Z and
+        Gen-Alpha, I often feel like I'm reading a play written by Shakespeare. I can pick out a few words, but I leave
+        feeling confused and angry. How do they expect generations, who have seemingly invented their own language, to
+        read the great works of William Shakespeare? The answer is simple: <br /> Translate it to Gen-Z slang.</p>
+
+    <p>Type Shakespearean in the box on the left and press "Generate" to translate it into Gen-Z English. <br /> Or,
+        press the swap button to translate from English to Shakespearean.</p>
+    <br />
+    <br />
+    <div id="sTranslateTable" class="translateTable">
+        <table class="innerTable">
+            <tr>
+                <th>Shakespearean</th>
+                <th>GenZ English</th>
+            </tr>
+            <td id="inputText" class="input-listener" contenteditable="true" placeholder="Shakespearean Text"></td>
+            <td id="outputText" class="input-listener" placeholder="English Text"></td>
+        </table>
+    </div>
+
+    <div id="eTranslateTable" class="translateTable" style="display: none;">
+        <table class="innerTable">
+            <tr>
+                <th>GenZ English</th>
+                <th>Shakespearean</th>
+            </tr>
+            <td id="inputText2" class="input-listener" contenteditable="true" placeholder="English Text"></td>
+            <td id="outputText2" class="input-listener" placeholder="Shakespearean Text"></td>
+        </table>
+    </div>
+
+    <div class="generate-btn">
+        <button id="generateBtn" class="btn">Generate</button>
+    </div>
+
+    <div class="swap-btn">
+        <button id="swapBtn" class="btn">Swap</button>
+    </div>
+
+
+</body>
+<script src="./js/elizabethDict.js" type="module"></script>
+<script src="./js/main.js" type="module"></script>
+
+</html>

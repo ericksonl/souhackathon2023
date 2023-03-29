@@ -29,3 +29,6 @@ The Fun Translation API only allows 5 calls per hour, which is less than conveni
 
 ## What I learned
 Translating to Shakespearean is easy, but translating from Shakespearean is very difficult.
+
+## Try it for yourself
+https://www.liamedev.com/souhackathon2023/

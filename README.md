@@ -1,5 +1,5 @@
 # Shakespearean to Gen-Z
-### Southern Oregon University Hackathon 2023
+### 2nd Place Winner in the Southern Oregon University Hackathon 2023
 
 ## Inspiration
 Shakespeare is well known for having introduced thousands of new words to the the English vocabulary. Although many are used to this day, some have not been used since his time. Listening to the slang of Gen-Z and Gen-Alpha, I often feel like I'm reading a play written by Shakespeare. I can pick out a few words, but I leave feeling confused and angry. How do they expect generations, who have seemingly invented their own language, to read the great works of William Shakespeare? The answer is simple:
@@ -31,4 +31,4 @@ The Fun Translation API only allows 5 calls per hour, which is less than conveni
 Translating to Shakespearean is easy, but translating from Shakespearean is very difficult.
 
 ## Try it for yourself
-https://www.liamedev.com/souhackathon2023/
+[https://www.liamedev.com/](https://www.liamedev.com/code/SPTranslator/SPtoGenZ/)
